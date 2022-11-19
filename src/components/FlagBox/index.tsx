@@ -1,16 +1,17 @@
-import { Container } from "./styles";
-import { Flag } from "phosphor-react";
-import { useTheme } from "styled-components";
+import { Container, Flag } from "./styles";
+import { TeamsFlag } from "../../WorldCupData/Flags/TeamsFlag";
 
 type Props = {
-  team: string;
+  teamName: string;
 };
 
-export function FlagBox({ team }: Props) {
-  const { COLORS } = useTheme();
+export function FlagBox({ teamName }: Props) {
   return (
     <Container>
-      <Flag color={COLORS.WHITE_300} />
+      {TeamsFlag.map((item) => {
+        if (teamName === item.id)
+          return <Flag key={item.id} image={item.flag} />;
+      })}
     </Container>
   );
 }

@@ -1,12 +1,15 @@
 import { ThemeProvider } from "styled-components";
 import { RoutesConfig } from "./routes/routes";
+import { LoginProvider } from "./Context/LoginContext";
 
 import theme from "./theme";
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <RoutesConfig></RoutesConfig>
+      <LoginProvider>
+        <RoutesConfig></RoutesConfig>
+      </LoginProvider>
     </ThemeProvider>
   );
 }

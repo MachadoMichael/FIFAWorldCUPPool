@@ -14,6 +14,6 @@ export const Container = styled.main`
   height: 100%;
 
   ${({ theme }) => css`
-    background-color: linear-gradient(${theme.COLORS.GRAY_800});
+    background-color: ${theme.COLORS.GRAY_800};
   `}
 `;

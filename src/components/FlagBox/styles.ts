@@ -14,3 +14,12 @@ export const Container = styled.section`
     padding: ${theme.PADDING.MD}px;
   `}
 `;
+
+export const Flag = styled.section<{ image: string }>`
+  width: 100%;
+  height: 100%;
+  background-image: url(${(props) => props.image});
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+`;

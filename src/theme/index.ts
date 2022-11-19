@@ -7,7 +7,7 @@ export default {
     GRAY_800: "#1E1E1E",
     GRAY_400: "#57525B",
 
-    QATAR_GRADIENT: `${90}deg, #7f1431 ${10}%, #000000 ${130}%`,
+    QATAR_GRADIENT: `${90}deg, #7f1431 ${10}%, #000 ${130}%`,
   },
 
   FONT_FAMILY: {
@@ -32,4 +32,6 @@ export default {
     MD: 8,
     LG: 16,
   },
+
+  BOX_SHADOW: `${2}px ${2}px ${1}px #000 `,
 };

@@ -2,7 +2,7 @@ import { Container, Text, Section, PlayerRankBoxProps } from "./styles";
 
 type Props = {
   player: string;
-  superpower: string;
+  heroName: string;
   points: number;
   position: number;
   type?: PlayerRankBoxProps;
@@ -10,7 +10,7 @@ type Props = {
 
 export function PlayerRankBox({
   player,
-  superpower,
+  heroName,
   points,
   position,
   type = "RED",
@@ -20,7 +20,7 @@ export function PlayerRankBox({
       <Text>{position}</Text>
       <Section>
         <Text>{player}</Text>
-        <Text>{superpower}</Text>
+        <Text>{heroName}</Text>
       </Section>
 
       <Text>{points}</Text>

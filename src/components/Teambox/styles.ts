@@ -15,6 +15,7 @@ export const Container = styled.section<Props>`
   align-items: center;
   margin-bottom: 8px;
   ${({ theme, type }) => css`
+    box-shadow: ${theme.BOX_SHADOW};
     background-color: ${type === "DARK"
       ? theme.COLORS.GRAY_800
       : theme.COLORS.GRAY_400};
@@ -41,6 +42,13 @@ export const Text = styled.h5`
     font-size: ${theme.FONT_SIZE.SM}px;
     color: ${theme.COLORS.WHITE_300};
     font-family: ${theme.FONT_FAMILY.INTER}, sans-serif;
-    background-color: ${theme.COLORS.GRAY_800};
   `};
+`;
+
+export const Flag = styled.section<{ image: string }>`
+  width: 14%;
+  height: 100%;
+  background-image: url(${(props) => props.image});
+  background-size: contain;
+  background-repeat: no-repeat;
 `;

@@ -1,18 +1,24 @@
-import { Container, Text, Section, TeamboxStyleProps } from "./styles";
-import { Flag } from "phosphor-react";
+import { Container, Text, Section, TeamboxStyleProps, Flag } from "./styles";
+
+import { TeamsFlag } from "../../WorldCupData/Flags/TeamsFlag";
 
 type Props = {
-  team: string;
+  teamName: string;
   points: number;
   type?: TeamboxStyleProps;
 };
 
-export function Teambox({ team, points, type = "DARK" }: Props) {
+export function Teambox({ teamName, points, type = "DARK" }: Props) {
   return (
     <Container type={type}>
-      <Flag />
+      
+      {TeamsFlag.map((item) => {
+        if (teamName === item.id)
+          return <Flag key={item.id} image={item.flag} />;
+      })}
+
       <Section>
-        <Text>{team}</Text>
+        <Text>{teamName}</Text>
       </Section>
 
       <Text>{points}</Text>

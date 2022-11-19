@@ -4,12 +4,15 @@ export const Container = styled.section`
   height: 45px;
   box-sizing: border-box;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
+  width: 100px;
+
   ${({ theme }) => css`
     text-shadow: 1px 1px 0px ${theme.COLORS.GRAY_800};
     padding: ${theme.PADDING.MD}px;
     color: ${theme.COLORS.WHITE_300};
+    font-family: ${theme.FONT_FAMILY.INTER}, sans-serif;
   `};
 `;
 

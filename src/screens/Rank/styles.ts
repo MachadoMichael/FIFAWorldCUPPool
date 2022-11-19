@@ -12,13 +12,18 @@ export const Container = styled.main`
   align-items: center;
   width: 100%;
   height: 100%;
+  overflow: auto;
 
   ${({ theme }) => css`
-    background-image: linear-gradient(${theme.COLORS.GRAY_800});
+    background-color: ${theme.COLORS.GRAY_800};
   `}
 `;
 
 export const RankInterface = styled.section`
+  max-height: 80vh;
+`;
+
+export const RankList = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;

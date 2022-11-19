@@ -15,6 +15,7 @@ export const Container = styled.section<Props>`
   align-items: center;
   margin-bottom: 8px;
   ${({ theme, type }) => css`
+    box-shadow: ${theme.BOX_SHADOW};
     background-color: ${type === "RED"
       ? theme.COLORS.RED_700
       : theme.COLORS.GRAY_400};
@@ -44,6 +45,6 @@ export const Text = styled.h5`
   ${({ theme }) => css`
     font-size: ${theme.FONT_SIZE.SM}px;
     color: ${theme.COLORS.WHITE_300};
-    font-family: ${theme.FONT_FAMILY.INTER};
+    font-family: ${theme.FONT_FAMILY.INTER}, sans-serif;
   `};
 `;

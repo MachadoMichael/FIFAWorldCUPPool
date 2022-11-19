@@ -24,3 +24,21 @@ export const RegisterInterface = styled.section`
   justify-content: center;
   align-items: center;
 `;
+
+export const BackLoginScreen = styled.section`
+  margin-top: 8px;
+
+  text-align: end;
+  transition: 0.5s;
+  font-weight: bold;
+  ${({ theme }) => css`
+    color: ${theme.COLORS.WHITE_300};
+    font-family: ${theme.FONT_FAMILY.INTER}, sans-serif;
+    font-size: ${theme.FONT_SIZE.SM}px;
+    text-shadow: 1px 1px 0px ${theme.COLORS.GRAY_800};
+    &:hover {
+      cursor: pointer;
+      color: ${theme.COLORS.GRAY_400};
+    }
+  `}
+`;
