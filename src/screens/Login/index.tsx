@@ -72,14 +72,23 @@ export function Login() {
             <NewUser onClick={() => navigate("register")}>NOVO USUÁRIO</NewUser>
           </>
         ) : (
-          <Button
-            text="Desconectar"
-            butttonFunction={() => {
-              setLogged(false);
-              setUserNameConnected("");
-              localStorage.clear();
-            }}
-          />
+          <>
+            <Button
+              text="Desconectar"
+              butttonFunction={() => {
+                setLogged(false);
+                setUserNameConnected("");
+                localStorage.clear();
+              }}
+            />
+            <Button
+            type="LIGHT"
+              text="Menu"
+              butttonFunction={() => {
+                navigate("/menutabs");
+              }}
+            />
+          </>
         )}
       </LoginInterface>
 

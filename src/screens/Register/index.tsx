@@ -36,6 +36,10 @@ export function Register() {
         if (response === true) {
           setModalMessage(userCreatedWithSuccess);
           clearFields();
+
+          setInterval(() => {
+            navigate("/");
+          }, 2000);
         } else {
           setModalMessage(userNameAlreadyExist);
         }

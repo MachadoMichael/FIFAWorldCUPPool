@@ -51,10 +51,6 @@ export function Playoffs() {
       userName: userNameConnected,
       userPlayoffsBets: worldCupPlayoffsDataBet,
     });
-
-    getUserBets(userNameConnected).then((response) => {
-      console.log(response, "new try");
-    });
   }, [worldCupPlayoffsDataBet]);
 
   return (
