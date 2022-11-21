@@ -1,5 +1,5 @@
 export const ActionsActivator = {
-  startGroupPhase: false,
+  startGroupPhase: true,
   startRound16: false,
   startQuarterfinals: false,
   startSemifinals: false,

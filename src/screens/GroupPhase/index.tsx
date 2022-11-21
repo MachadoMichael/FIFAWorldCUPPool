@@ -52,13 +52,6 @@ export function GroupPhase() {
     "GroupH",
   ];
 
-  useEffect(() => {
-    updateUserBets({
-      userName: userNameConnected,
-      userGroupBets: worldCupDataGroupsBet,
-    });
-  }, [worldCupDataGroupsBet]);
-
   return (
     <Container>
       <TabsButton />
@@ -105,8 +98,9 @@ export function GroupPhase() {
             updateUserBets({
               userName: userNameConnected,
               userGroupBets: worldCupDataGroupsBet,
+            }).then((response) => {
+              setShowModal(response);
             });
-            setShowModal(true);
           }}
         />
       ) : (

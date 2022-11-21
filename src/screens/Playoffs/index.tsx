@@ -7,7 +7,7 @@ import { Container, GamesInterface, SelectorContainer } from "./styles";
 
 import { LoginContext } from "../../Context/LoginContext";
 import { useContext, useEffect, useState } from "react";
-import { WorldCupGroupsData } from "../../WorldCupData/WorldCupGroupsData";
+
 import { WorldCupPlayoffsData } from "../../WorldCupData/WorldCupPlayoffsData";
 import { DataSelectorButton } from "../../components/DataSelectorButton";
 import { ModeSelectorButton } from "../../components/ModeSelectorButton";
@@ -15,9 +15,7 @@ import { updateUserBets } from "../../DataBase/services/update/updateUserBets";
 
 import { Round } from "../../components/Round";
 import { UserBetsDataType } from "../../@types/UserBetsData";
-import { pointsCalculator } from "../../WorldCupData/GroupData/pointsCalculator";
-import { createUserBets } from "../../DataBase/services/create/createUserBets";
-import { updateBetPoints } from "../../DataBase/services/update/updateBetPoints";
+
 import { betsHaveBeenSent } from "../../components/Modal/messagesForUsers";
 import { Modal } from "../../components/Modal";
 
@@ -45,13 +43,6 @@ export function Playoffs() {
     "Semifinals",
     "Final",
   ];
-
-  useEffect(() => {
-    updateUserBets({
-      userName: userNameConnected,
-      userPlayoffsBets: worldCupPlayoffsDataBet,
-    });
-  }, [worldCupPlayoffsDataBet]);
 
   return (
     <Container>

@@ -18,23 +18,29 @@ export async function updateUserBets({
 }: UpdateUserBetsType) {
   const updatedDoc = doc(db, "bets", userName);
 
-  if (userGroupBets && userGroupBets !== undefined) {
-    await updateDoc(updatedDoc, {
-      groupsBets: userGroupBets,
-    });
+  try {
+    if (userGroupBets && userGroupBets !== undefined) {
+      await updateDoc(updatedDoc, {
+        groupsBets: userGroupBets,
+      });
 
-    updateBetPoints({
-      userGroupBets: userGroupBets,
-      userName: userName,
-    });
-  } else if (userPlayoffsBets && userPlayoffsBets !== undefined) {
-    await updateDoc(updatedDoc, {
-      playoffsBets: userPlayoffsBets,
-    });
+      updateBetPoints({
+        userGroupBets: userGroupBets,
+        userName: userName,
+      });
+    } else if (userPlayoffsBets && userPlayoffsBets !== undefined) {
+      await updateDoc(updatedDoc, {
+        playoffsBets: userPlayoffsBets,
+      });
 
-    updateBetPoints({
-      userPlayoffsBets: userPlayoffsBets,
-      userName: userName,
-    });
+      updateBetPoints({
+        userPlayoffsBets: userPlayoffsBets,
+        userName: userName,
+      });
+    }
+
+    return true;
+  } catch (error) {
+    return false;
   }
 }
