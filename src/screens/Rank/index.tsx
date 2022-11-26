@@ -8,6 +8,7 @@ import { LoginContext } from "../../Context/LoginContext";
 
 import { getUserDataForRank } from "../../DataBase/services/get/getUserDataForRank";
 import { UserRankList } from "../../@types/UserRankList";
+import { groupPhaseBetPointsCalculator } from "../../DataBase/services/calculator/groupPhaseBetPointsCalculator";
 
 export function Rank() {
   const { userNameConnected } = useContext(LoginContext);
@@ -18,6 +19,7 @@ export function Rank() {
   useEffect(() => {
     getUserDataForRank().then((response) => {
       setRankOfUsersForPoints(response);
+      console.log(response, "respone Rank");
     });
   }, []);
 

@@ -8,36 +8,42 @@ export const GroupF_Clashes: GroupGameType[] = [
     teamB: "Croácia",
     scoreTeamA: 0,
     scoreTeamB: 0,
+    concluded: true,
   },
   {
     teamA: "Bélgica",
     teamB: "Canada",
-    scoreTeamA: 0,
+    scoreTeamA: 1,
     scoreTeamB: 0,
+    concluded: true,
   },
   {
     teamA: "Bélgica",
     teamB: "Marrocos",
     scoreTeamA: 0,
     scoreTeamB: 0,
+    concluded: false,
   },
   {
     teamA: "Croácia",
     teamB: "Canada",
     scoreTeamA: 0,
     scoreTeamB: 0,
+    concluded: false,
   },
   {
     teamA: "Croácia",
     teamB: "Bélgica",
     scoreTeamA: 0,
     scoreTeamB: 0,
+    concluded: false,
   },
   {
     teamA: "Canada",
     teamB: "Marrocos",
     scoreTeamA: 0,
     scoreTeamB: 0,
+    concluded: false,
   },
 ];
 

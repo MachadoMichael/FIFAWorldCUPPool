@@ -18,6 +18,8 @@ import { UserBetsDataType } from "../../@types/UserBetsData";
 
 import { betsHaveBeenSent } from "../../components/Modal/messagesForUsers";
 import { Modal } from "../../components/Modal";
+import { groupPhaseBetPointsCalculator } from "../../DataBase/services/calculator/groupPhaseBetPointsCalculator";
+import { updateBetPoints } from "../../DataBase/services/update/updateBetPoints";
 
 export function Playoffs() {
   useEffect(() => {
@@ -25,6 +27,10 @@ export function Playoffs() {
       if (data !== undefined) {
         const userBets = data.playoffsBets;
         setWorldCupPlayoffsDataBet(userBets);
+        updateBetPoints({
+          userPlayoffsBets: userBets,
+          userName: userNameConnected,
+        });
       }
     });
   }, []);

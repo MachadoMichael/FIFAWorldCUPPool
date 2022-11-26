@@ -19,6 +19,7 @@ export const clash1_QuarterFinal = {
   scoreTeamB: 0,
   penaltysTeamA: 0,
   penaltysTeamB: 0,
+  concluded: false,
 } as PlayoffGameType;
 
 export const clash2_QuarterFinal = {
@@ -28,6 +29,7 @@ export const clash2_QuarterFinal = {
   scoreTeamB: 0,
   penaltysTeamA: 0,
   penaltysTeamB: 0,
+  concluded: false,
 } as PlayoffGameType;
 
 export const clash3_QuarterFinal = {
@@ -37,6 +39,7 @@ export const clash3_QuarterFinal = {
   scoreTeamB: 0,
   penaltysTeamA: 0,
   penaltysTeamB: 0,
+  concluded: false,
 } as PlayoffGameType;
 
 export const clash4_QuarterFinal = {
@@ -46,4 +49,5 @@ export const clash4_QuarterFinal = {
   scoreTeamB: 0,
   penaltysTeamA: 0,
   penaltysTeamB: 0,
+  concluded: false,
 } as PlayoffGameType;

@@ -3,6 +3,7 @@ type GroupGameType = {
   teamB: string;
   scoreTeamA: number;
   scoreTeamB: number;
+  concluded: boolean;
 };
 
 type TeamType = {

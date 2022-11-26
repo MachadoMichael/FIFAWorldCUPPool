@@ -5,6 +5,7 @@ export type PlayoffGameType = {
   scoreTeamB: number;
   penaltysTeamA: number;
   penaltysTeamB: number;
+  concluded: boolean;
 };
 
 export type PlayoffsPhaseData = {

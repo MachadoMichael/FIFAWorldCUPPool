@@ -15,6 +15,7 @@ export const clash1_SemiFinal = {
   scoreTeamB: 0,
   penaltysTeamA: 0,
   penaltysTeamB: 0,
+  concluded: false,
 } as PlayoffGameType;
 
 export const clash2_SemiFinal = {
@@ -24,4 +25,5 @@ export const clash2_SemiFinal = {
   scoreTeamB: 0,
   penaltysTeamA: 0,
   penaltysTeamB: 0,
+  concluded: false,
 } as PlayoffGameType;

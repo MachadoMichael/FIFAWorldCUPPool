@@ -6,24 +6,26 @@ export function pointsCalculator(team: string, clashes: GroupGameType[]) {
 
   if (ActionsActivator.startGroupPhase === true) {
     clashes.map((Game) => {
-      if (team === Game.teamA) {
-        if (Game.scoreTeamA > Game.scoreTeamB) {
-          teamPoints += 3;
-        } else if (Game.scoreTeamA === Game.scoreTeamB) {
-          teamPoints += 1;
+      if (Game.concluded === true) {
+        if (team === Game.teamA) {
+          if (Game.scoreTeamA > Game.scoreTeamB) {
+            teamPoints += 3;
+          } else if (Game.scoreTeamA === Game.scoreTeamB) {
+            teamPoints += 1;
+          } else {
+            teamPoints += 0;
+          }
+        } else if (team === Game.teamB) {
+          if (Game.scoreTeamB > Game.scoreTeamA) {
+            teamPoints += 3;
+          } else if (Game.scoreTeamB === Game.scoreTeamA) {
+            teamPoints += 1;
+          } else {
+            teamPoints += 0;
+          }
         } else {
-          teamPoints += 0;
+          return teamPoints;
         }
-      } else if (team === Game.teamB) {
-        if (Game.scoreTeamB > Game.scoreTeamA) {
-          teamPoints += 3;
-        } else if (Game.scoreTeamB === Game.scoreTeamA) {
-          teamPoints += 1;
-        } else {
-          teamPoints += 0;
-        }
-      } else {
-        return teamPoints;
       }
     });
   }

@@ -13,4 +13,5 @@ export const clash_Final = {
   scoreTeamB: 0,
   penaltysTeamA: 0,
   penaltysTeamB: 0,
+  concluded: false,
 } as PlayoffGameType;

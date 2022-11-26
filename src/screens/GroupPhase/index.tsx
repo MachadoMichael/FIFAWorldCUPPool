@@ -7,10 +7,7 @@ import { Round } from "../../components/Round";
 import { Title } from "../../components/Title";
 import { Button } from "../../components/Button";
 import { TabsButton } from "../../components/TabsButton";
-import {
-  betsHaveBeenSent,
-  warningRules,
-} from "../../components/Modal/messagesForUsers";
+import { betsHaveBeenSent } from "../../components/Modal/messagesForUsers";
 import { DataSelectorButton } from "../../components/DataSelectorButton";
 import { ModeSelectorButton } from "../../components/ModeSelectorButton";
 
@@ -21,6 +18,8 @@ import { updateUserBets } from "../../DataBase/services/update/updateUserBets";
 
 import { UserBetsDataType } from "../../@types/UserBetsData";
 import { Modal } from "../../components/Modal";
+import { groupPhaseBetPointsCalculator } from "../../DataBase/services/calculator/groupPhaseBetPointsCalculator";
+import { updateBetPoints } from "../../DataBase/services/update/updateBetPoints";
 
 export function GroupPhase() {
   const { userNameConnected } = useContext(LoginContext);
@@ -30,6 +29,10 @@ export function GroupPhase() {
       if (data !== undefined) {
         const userBets = data.groupsBets;
         setWorldCupDataBet(userBets);
+        updateBetPoints({
+          userGroupBets: userBets,
+          userName: userNameConnected,
+        });
       }
     });
   }, []);

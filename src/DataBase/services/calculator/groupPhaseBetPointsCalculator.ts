@@ -12,28 +12,30 @@ export async function groupPhaseBetPointsCalculator(
       group.clashes.forEach((clash) => {
         betGroupsData.forEach((betGroup) => {
           betGroup.clashes.forEach((betClash) => {
-            if (
-              clash.teamA === betClash.teamA &&
-              clash.teamB === betClash.teamB
-            ) {
+            if (clash.concluded === true) {
               if (
-                clash.scoreTeamA === betClash.scoreTeamA &&
-                clash.scoreTeamB === betClash.scoreTeamB
+                clash.teamA === betClash.teamA &&
+                clash.teamB === betClash.teamB
               ) {
-                betPoints += 2;
-              } else if (
-                (betClash.scoreTeamA > betClash.scoreTeamB &&
-                  clash.scoreTeamA > clash.scoreTeamB) ||
-                (betClash.scoreTeamA < betClash.scoreTeamB &&
-                  clash.scoreTeamA < clash.scoreTeamB)
-              ) {
-                betPoints += 1;
-              } else if (
-                betClash.scoreTeamA === betClash.scoreTeamB &&
-                clash.scoreTeamA === clash.scoreTeamB &&
-                clash.scoreTeamA !== betClash.scoreTeamA
-              ) {
-                betPoints += 1;
+                if (
+                  clash.scoreTeamA === betClash.scoreTeamA &&
+                  clash.scoreTeamB === betClash.scoreTeamB
+                ) {
+                  betPoints += 2;
+                } else if (
+                  (betClash.scoreTeamA > betClash.scoreTeamB &&
+                    clash.scoreTeamA > clash.scoreTeamB) ||
+                  (betClash.scoreTeamA < betClash.scoreTeamB &&
+                    clash.scoreTeamA < clash.scoreTeamB)
+                ) {
+                  betPoints += 1;
+                } else if (
+                  betClash.scoreTeamA === betClash.scoreTeamB &&
+                  clash.scoreTeamA === clash.scoreTeamB &&
+                  clash.scoreTeamA !== betClash.scoreTeamA
+                ) {
+                  betPoints += 1;
+                }
               }
             }
           });

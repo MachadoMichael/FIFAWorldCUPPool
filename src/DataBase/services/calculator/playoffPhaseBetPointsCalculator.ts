@@ -38,31 +38,33 @@ function phaseBetPoints(phase: PlayoffsPhaseData, betPhase: PlayoffsPhaseData) {
   let phaseBetPoints = 0;
 
   phase.clashes.forEach((clash, index) => {
-    if (
-      clash.teamA === betPhase.clashes[index].teamA &&
-      clash.teamB === betPhase.clashes[index].teamB
-    ) {
+    if (clash.concluded === true) {
       if (
-        clash.scoreTeamA === betPhase.clashes[index].scoreTeamA &&
-        clash.scoreTeamB === betPhase.clashes[index].scoreTeamB
+        clash.teamA === betPhase.clashes[index].teamA &&
+        clash.teamB === betPhase.clashes[index].teamB
       ) {
-        phaseBetPoints += 2;
-      } else if (
-        (betPhase.clashes[index].scoreTeamA >
-          betPhase.clashes[index].scoreTeamB &&
-          clash.scoreTeamA > clash.scoreTeamB) ||
-        (betPhase.clashes[index].scoreTeamA <
-          betPhase.clashes[index].scoreTeamB &&
-          clash.scoreTeamA < clash.scoreTeamB)
-      ) {
-        phaseBetPoints += 1;
-      } else if (
-        betPhase.clashes[index].scoreTeamA ===
-          betPhase.clashes[index].scoreTeamB &&
-        clash.scoreTeamA === clash.scoreTeamB &&
-        clash.scoreTeamA !== betPhase.clashes[index].scoreTeamA
-      ) {
-        phaseBetPoints += 1;
+        if (
+          clash.scoreTeamA === betPhase.clashes[index].scoreTeamA &&
+          clash.scoreTeamB === betPhase.clashes[index].scoreTeamB
+        ) {
+          phaseBetPoints += 2;
+        } else if (
+          (betPhase.clashes[index].scoreTeamA >
+            betPhase.clashes[index].scoreTeamB &&
+            clash.scoreTeamA > clash.scoreTeamB) ||
+          (betPhase.clashes[index].scoreTeamA <
+            betPhase.clashes[index].scoreTeamB &&
+            clash.scoreTeamA < clash.scoreTeamB)
+        ) {
+          phaseBetPoints += 1;
+        } else if (
+          betPhase.clashes[index].scoreTeamA ===
+            betPhase.clashes[index].scoreTeamB &&
+          clash.scoreTeamA === clash.scoreTeamB &&
+          clash.scoreTeamA !== betPhase.clashes[index].scoreTeamA
+        ) {
+          phaseBetPoints += 1;
+        }
       }
     }
   });

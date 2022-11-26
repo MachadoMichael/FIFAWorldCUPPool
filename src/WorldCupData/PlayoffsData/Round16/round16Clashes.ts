@@ -11,6 +11,7 @@ export const clash1_Round16 = {
   scoreTeamB: 0,
   penaltysTeamA: 0,
   penaltysTeamB: 0,
+  concluded: false,
 } as PlayoffGameType;
 
 export const clash2_Round16 = {
@@ -20,6 +21,7 @@ export const clash2_Round16 = {
   scoreTeamB: 0,
   penaltysTeamA: 0,
   penaltysTeamB: 0,
+  concluded: false,
 } as PlayoffGameType;
 
 export const clash3_Round16 = {
@@ -29,6 +31,7 @@ export const clash3_Round16 = {
   scoreTeamB: 0,
   penaltysTeamA: 0,
   penaltysTeamB: 0,
+  concluded: false,
 } as PlayoffGameType;
 
 export const clash4_Round16 = {
@@ -38,6 +41,7 @@ export const clash4_Round16 = {
   scoreTeamB: 0,
   penaltysTeamA: 0,
   penaltysTeamB: 0,
+  concluded: false,
 } as PlayoffGameType;
 
 export const clash5_Round16 = {
@@ -47,6 +51,7 @@ export const clash5_Round16 = {
   scoreTeamB: 0,
   penaltysTeamA: 0,
   penaltysTeamB: 0,
+  concluded: false,
 } as PlayoffGameType;
 
 export const clash6_Round16 = {
@@ -56,6 +61,7 @@ export const clash6_Round16 = {
   scoreTeamB: 0,
   penaltysTeamA: 0,
   penaltysTeamB: 0,
+  concluded: false,
 } as PlayoffGameType;
 
 export const clash7_Round16 = {
@@ -65,6 +71,7 @@ export const clash7_Round16 = {
   scoreTeamB: 0,
   penaltysTeamA: 0,
   penaltysTeamB: 0,
+  concluded: false,
 } as PlayoffGameType;
 
 export const clash8_Round16 = {
@@ -74,4 +81,5 @@ export const clash8_Round16 = {
   scoreTeamB: 0,
   penaltysTeamA: 0,
   penaltysTeamB: 0,
+  concluded: false,
 } as PlayoffGameType;
