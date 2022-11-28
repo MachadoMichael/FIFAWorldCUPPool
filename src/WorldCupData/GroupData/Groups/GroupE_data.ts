@@ -21,14 +21,14 @@ export const GroupE_Clashes: GroupGameType[] = [
     teamA: "Japão",
     teamB: "Costa Rica",
     scoreTeamA: 0,
-    scoreTeamB: 0,
+    scoreTeamB: 1,
     concluded: false,
   },
   {
     teamA: "Espanha",
     teamB: "Alemanha",
-    scoreTeamA: 0,
-    scoreTeamB: 0,
+    scoreTeamA: 1,
+    scoreTeamB: 1,
     concluded: false,
   },
   {

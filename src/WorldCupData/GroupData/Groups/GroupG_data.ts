@@ -20,16 +20,16 @@ export const GroupG_Clashes: GroupGameType[] = [
   {
     teamA: "Camarões",
     teamB: "Sérvia",
-    scoreTeamA: 0,
-    scoreTeamB: 0,
-    concluded: false,
+    scoreTeamA: 3,
+    scoreTeamB: 3,
+    concluded: true,
   },
   {
     teamA: "Brasil",
     teamB: "Suiça",
-    scoreTeamA: 0,
+    scoreTeamA: 1,
     scoreTeamB: 0,
-    concluded: false,
+    concluded: true,
   },
   {
     teamA: "Camarões",

@@ -27,8 +27,8 @@ export const GroupD_Clashes: GroupGameType[] = [
   {
     teamA: "França",
     teamB: "Dinamarca",
-    scoreTeamA: 0,
-    scoreTeamB: 0,
+    scoreTeamA: 2,
+    scoreTeamB: 1,
     concluded: false,
   },
   {
