@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 
 export const Container = styled.section`
   height: 45px;
@@ -19,6 +19,7 @@ export const Container = styled.section`
 export const Input = styled.input`
   width: 40px;
   height: 40px;
+  box-sizing: border-box;
   margin: 8px;
   border: none;
   text-align: center;
@@ -30,4 +31,10 @@ export const Input = styled.input`
     color: ${theme.COLORS.WHITE_300};
     background-color: ${theme.COLORS.GRAY_800};
   `};
+
+  @media (max-width: 768px) {
+    height: 45px;
+    width: 50px;
+    font-size: ${({ theme }) => theme.FONT_SIZE.LG}px;
+  }
 `;
