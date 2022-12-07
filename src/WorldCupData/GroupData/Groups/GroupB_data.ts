@@ -43,7 +43,7 @@ export const GroupB_Clashes: GroupGameType[] = [
     teamB: "Inglaterra",
     scoreTeamA: 0,
     scoreTeamB: 3,
-    concluded: false,
+    concluded: true,
   },
 ];
 

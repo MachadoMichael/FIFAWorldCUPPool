@@ -18,7 +18,7 @@ import { UserBetsDataType } from "../../@types/UserBetsData";
 
 import { betsHaveBeenSent } from "../../components/Modal/messagesForUsers";
 import { Modal } from "../../components/Modal";
-import { groupPhaseBetPointsCalculator } from "../../DataBase/services/calculator/groupPhaseBetPointsCalculator";
+
 import { updateBetPoints } from "../../DataBase/services/update/updateBetPoints";
 
 export function Playoffs() {
@@ -87,8 +87,8 @@ export function Playoffs() {
           text="ENVIAR PALPITES"
           butttonFunction={() => {
             updateUserBets({
+              userPlayoffsBets: worldCupPlayoffsDataBet,
               userName: userNameConnected,
-              userPlayoffsBets: WorldCupPlayoffsData,
             });
             setShowModal(true);
           }}

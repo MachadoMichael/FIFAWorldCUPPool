@@ -8,10 +8,8 @@ export function getClashWinner(clash: PlayoffGameType) {
   } else if (clash.scoreTeamA === clash.scoreTeamB) {
     if (clash.penaltysTeamA > clash.penaltysTeamB) {
       return clash.teamA;
-    } else if (clash.penaltysTeamA < clash.penaltysTeamB) {
-      return clash.teamB;
     } else {
-      return "à definir";
+      return clash.teamB;
     }
   }
 }

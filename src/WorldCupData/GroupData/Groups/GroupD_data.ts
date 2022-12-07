@@ -29,21 +29,21 @@ export const GroupD_Clashes: GroupGameType[] = [
     teamB: "Dinamarca",
     scoreTeamA: 2,
     scoreTeamB: 1,
-    concluded: false,
+    concluded: true,
   },
   {
     teamA: "Tunísia",
     teamB: "França",
-    scoreTeamA: 0,
+    scoreTeamA: 1,
     scoreTeamB: 0,
-    concluded: false,
+    concluded: true,
   },
   {
     teamA: "Austrália",
     teamB: "Dinamarca",
-    scoreTeamA: 0,
+    scoreTeamA: 1,
     scoreTeamB: 0,
-    concluded: false,
+    concluded: true,
   },
 ];
 

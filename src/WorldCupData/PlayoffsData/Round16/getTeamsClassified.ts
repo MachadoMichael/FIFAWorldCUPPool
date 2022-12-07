@@ -18,6 +18,5 @@ export function getTeamsClassified(groupName: string, position: number) {
       }
     });
   }
-
   return teamName;
 }
