@@ -11,19 +11,19 @@ import {
 export const clash1_SemiFinal = {
   teamA: getClashWinner(clash1_QuarterFinal),
   teamB: getClashWinner(clash2_QuarterFinal),
-  scoreTeamA: 0,
+  scoreTeamA: 3,
   scoreTeamB: 0,
   penaltysTeamA: 0,
   penaltysTeamB: 0,
-  concluded: false,
+  concluded: true,
 } as PlayoffGameType;
 
 export const clash2_SemiFinal = {
   teamA: getClashWinner(clash3_QuarterFinal),
   teamB: getClashWinner(clash4_QuarterFinal),
-  scoreTeamA: 0,
+  scoreTeamA: 2,
   scoreTeamB: 0,
   penaltysTeamA: 0,
   penaltysTeamB: 0,
-  concluded: false,
+  concluded: true,
 } as PlayoffGameType;
